@@ -7,7 +7,9 @@ var vowelCount=0
 var consonantCount=0
 
 for(let ch of word){
+    
     if(vowels.includes(ch)){
+        
         vowelCount+=1
     }
     else if(ch!=" "){
