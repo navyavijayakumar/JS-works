@@ -27,29 +27,3 @@ console.log(startsWithVowels);
 
 
 
-// reduce()
-var arr1=[1,2,3,4,5,6,7,8,9,10]
-
-// total
-var total=arr1.reduce((n1,n2)=>n1+n2)
-console.log(total)
-
-// product
-
-var product=arr1.reduce((n1,n2)=>(n1*n2))
-console.log(product);
-
-// largest num
-
-var larNum=arr1.reduce((n1,n2)=>n1>n2?n1:n2)
-console.log(larNum);
-
-// smallest num
-var smallNum=arr1.reduce((n1,n2)=>n1<n2?n1:n2)
-console.log(smallNum);
-
-
-// cube sum
-var cubeSum=arr1.map((n1)=>n1**3).reduce((n1,n2)=>n1+n2)
-console.log(cubeSum);
-
