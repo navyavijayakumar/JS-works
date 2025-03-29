@@ -97,35 +97,36 @@
         <input type="text" class="form-control" id="display" >
         
         <div class="calculator-grid">
-            <button class="btn btn-function btn-calculator" onclick="">C</button>
-            <button class="btn btn-function btn-calculator" onclick="">⌫</button>
-            <button class="btn btn-operator btn-calculator" onclick="">÷</button>
-            <button class="btn btn-operator btn-calculator" onclick="">×</button>
+            <button class="btn btn-function btn-calculator" onclick="clearBox()">C</button>
+            <button class="btn btn-function btn-calculator" onclick="backSpace()">⌫</button>
+            <button class="btn btn-operator btn-calculator" onclick="liveScreen('/')">÷</button>
+            <button class="btn btn-operator btn-calculator" onclick="liveScreen('*')">×</button>
             
-            <button class="btn btn-number btn-calculator" onclick="">7</button>
-            <button class="btn btn-number btn-calculator" onclick="">8</button>
-            <button class="btn btn-number btn-calculator" onclick="">9</button>
-            <button class="btn btn-operator btn-calculator" onclick="">-</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('7')">7</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('8')">8</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('9')">9</button>
+            <button class="btn btn-operator btn-calculator" onclick="liveScreen('-')">-</button>
             
-            <button class="btn btn-number btn-calculator" onclick="">4</button>
-            <button class="btn btn-number btn-calculator" onclick="">5</button>
-            <button class="btn btn-number btn-calculator" onclick="">6</button>
-            <button class="btn btn-operator btn-calculator" onclick="">+</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('4')">4</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('5')">5</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('6')">6</button>
+            <button class="btn btn-operator btn-calculator" onclick="liveScreen('+')">+</button>
             
-            <button class="btn btn-number btn-calculator" onclick="">1</button>
-            <button class="btn btn-number btn-calculator" onclick="">2</button>
-            <button class="btn btn-number btn-calculator" onclick="">3</button>
-            <button class="btn btn-equal btn-calculator" onclick="">=</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('1')">1</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('2')">2</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('3')">3</button>
+            <button class="btn btn-equal btn-calculator" onclick="evaluateExpression()">=</button>
             
-            <button class="btn btn-number btn-calculator zero-btn" onclick="">0</button>
-            <button class="btn btn-number btn-calculator" onclick="">.</button>
+            <button class="btn btn-number btn-calculator zero-btn" onclick="liveScreen('0')">0</button>
+            <button class="btn btn-number btn-calculator" onclick="liveScreen('.')">.</button>
         </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 <script src="./script.js"></script>
 </html>
