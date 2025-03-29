@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card text-center shadow-lg" style="width: 300px;">
+            <div class="card-header bg-primary text-white">
+                <h3>Counter App</h3>
+            </div>
+            <div class="card-body">
+                <h1 id="counterDisplay" class="display-3 mb-4">0</h1>
+                <div class="btn-group" role="group" aria-label="Counter controls">
+                    <button onclick="handleDecrement()" id="decrementBtn" class="btn btn-danger">-</button>
+                    <button onclick="reset()" id="resetBtn" class="btn btn-warning">Reset</button>
+                    <button onclick="handleIncrement()" id="incrementBtn" class="btn btn-success">+</button>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                Simple Counter Application
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<script src="./script.js"></script>
+</html>
