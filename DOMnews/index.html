@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold text-gray-800">NewsHub</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300">Technology</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300">Science</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition duration-300">Environment</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Subscribe</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800 animate-fade-in">Latest News</h1>
+        
+        <div id="root" class="grid md:grid-cols-3 gap-6">
+            <!-- News Article 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl animate-fade-in stagger-1 transform hover:scale-105">
+                <img src="/api/placeholder/400/250" alt="News Image" class="w-full h-48 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">Technology</span>
+                        <span class="text-gray-500 text-sm">March 28, 2025</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">Breaking Tech Innovations</h2>
+                    <p class="text-gray-600 mb-4">Discover the latest groundbreaking technologies shaping our future and revolutionizing industries worldwide.</p>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group">
+                        Read More
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- News Article 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl animate-fade-in stagger-2 transform hover:scale-105">
+                <img src="/api/placeholder/400/250" alt="News Image" class="w-full h-48 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">Science</span>
+                        <span class="text-gray-500 text-sm">March 27, 2025</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">Medical Breakthrough</h2>
+                    <p class="text-gray-600 mb-4">Researchers unveil a promising new treatment that could potentially revolutionize how we approach chronic diseases.</p>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group">
+                        Read More
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- News Article 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl animate-fade-in stagger-3 transform hover:scale-105">
+                <img src="/api/placeholder/400/250" alt="News Image" class="w-full h-48 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">Environment</span>
+                        <span class="text-gray-500 text-sm">March 26, 2025</span>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-3">Climate Action Summit</h2>
+                    <p class="text-gray-600 mb-4">Global leaders convene to discuss critical strategies for combating climate change and promoting sustainability.</p>
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group">
+                        Read More
+                        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">NewsHub</h3>
+                <p class="text-gray-400">Your trusted source for the latest news and insights.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Categories</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Technology</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Science</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Environment</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Connect With Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.527 2.885 5.907 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.367 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.148 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.148-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-4 border-t border-gray-700 text-center">
+            <p class="text-gray-400">&copy; 2025 NewsHub. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="./script.js"></script>
+</html>
